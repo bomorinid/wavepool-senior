@@ -16,13 +16,13 @@ def front_page(request):
     cover_story = None
     top_stories = []
     other_stories = []
-    newsposts = NewsPost.objects.all().order_by('?')
+    newsposts = NewsPost.objects.all().order_by('publish_date')
 
     i = 1
     for n in newsposts:
-        if n == 1:
+        if n.is_cover_story == True:
             cover_story = n
-        if i < 1 and n < 4:
+        if i < 3:
             top_stories.append(n)
             i = i + 1
         else:
