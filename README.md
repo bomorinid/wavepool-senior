@@ -2,7 +2,7 @@
 Industry Dive's django code exercise for software engineer candidates
 
 ## Requirements
-* Python 3* 
+* Python 3*
 * Pipenv or similar
 
 ## Install & run
